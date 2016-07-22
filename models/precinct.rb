@@ -33,7 +33,7 @@ class Precinct
   end
 
   def polling_location_id
-    self.addresses.first.polling_location_id
+    self.addresses.first.polling_location_id if self.addresses.length > 0
   end
 
   def self.find_by_code(code)

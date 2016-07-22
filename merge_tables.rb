@@ -9,12 +9,9 @@ CSV.foreach("data/addresses.csv", headers: true) do |row|
   pre.addresses << a
 end
 
-arr1 = []
 CSV.foreach("data/precinct_polling_list.csv", headers: true) do |row|
   p = PollingPrecinct.new(row.to_hash)
-  pre = Precinct.new(p.precinct) if !Precinct.codes.include?(p.precinct)
-  arr1.push(pre) if pre
-  pre = Precinct.find_by_code(p.precinct) if Precinct.codes.include?(p.precinct)
+  # pre = Precinct.new(p.precinct) if !Precinct.codes.include?(p.precinct)
   arr = Address.all.select{|a| a.precinct_code == p.precinct}
   arr.each do |address|
     p.addresses << address
@@ -63,16 +60,17 @@ Precinct.all.each do |pre|
 end
 
 
-# Precinct.all.each do |pre|
-#   if pre.polling_location_id
-#     ppp.write(pre.id_number + ",")
-#     ppp.puts(pre.polling_location_id)
-#   end
-# end
+Precinct.all.each do |pre|
+  if pre.polling_location_id
+    ppp.write(pre.id_number + ",")
+    ppp.puts(pre.polling_location_id)
+  end
+end
+
+
 
 # arr = Precinct.no_poll
 
-binding.pry
 
 x = 1
 

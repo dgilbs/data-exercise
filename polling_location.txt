@@ -1,0 +1,34 @@
+address_line,directions,hours,photo_uri,hours_open_id,is_drop_box,is_early_voting,latitude,longitude,latlng_source,id
+288 York Street New Haven CT 06511,,,,,,,,,poll001
+301-399 South Boulevard Drive Bainbridge GA 39819,,,,,,,,,poll002
+150-151 Tremont Street Boston MA 02111,,,,,,,,,poll003
+2395 Ingleside Avenue Macon GA 31204,,,,,,,,,poll004
+1007 Merchant Street Ambridge PA 15003,,,,,,,,,poll005
+859 Washington Avenue Miami Beach FL 33139,,,,,,,,,poll006
+974 Great Plain Avenue Needham MA 02492,,,,,,,,,poll007
+139 Lynnfield Street Peabody MA 01960,,,,,,,,,poll008
+180 Nassau Street Princeton NJ 08542,,,,,,,,,poll009
+563 Carlsbad Village Drive Carlsbad CA 92008,,,,,,,,,poll010
+5110-5140 Main Street Buffalo NY 14221,,,,,,,,,poll011
+2048 Hillside Avenue New Hyde Park NY 11040,,,,,,,,,poll012
+108 West 2nd Street Los Angeles CA 90012,,,,,,,,,poll013
+29 Godwin Avenue Ridgewood NJ 07450,,,,,,,,,poll014
+1093 Hemphill Avenue Northwest Atlanta GA 30318,,,,,,,,,poll015
+328 Boston Road Billerica MA 01821,,,,,,,,,poll016
+1875 South Bascom Avenue Campbell CA 95008,,,,,,,,,poll017
+6444-6544 Georgia 85 Riverdale GA 30274,,,,,,,,,poll018
+443 Emerson Street Palo Alto CA 94301,,,,,,,,,poll019
+484 Moreland Avenue Northeast Atlanta GA 30307,,,,,,,,,poll020
+210 Blake Road North Hopkins MN 55343,,,,,,,,,poll021
+311 East State Street Rockford IL 61104,,,,,,,,,poll022
+1149 East Southern Avenue Mesa AZ 85204,,,,,,,,,poll023
+1782 Massachusetts Ave Cambridge MA 02140,,,,,,,,,poll024
+1101 South Joyce Street Arlington VA 22202,,,,,,,,,poll025
+574 Congress Street Portland ME 04101,,,,,,,,,poll026
+114 State Street Madison WI 53703,,,,,,,,,poll027
+9600-9708 West Linebaugh Avenue Westchase FL 33626,,,,,,,,,poll028
+3085 Jefferson Street Napa CA 94559,,,,,,,,,poll029
+2313 Frankford Avenue Philadelphia PA 19125,,,,,,,,,poll030
+2035 East North Avenue Milwaukee WI 53211,,,,,,,,,poll031
+110 Community Drive Augusta ME 04330,,,,,,,,,poll032
+114 10th Avenue New York NY 10011,,,,,,,,,poll033
