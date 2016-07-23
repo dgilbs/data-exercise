@@ -3,7 +3,9 @@ require_relative 'environment.rb'
 require 'pry'
 
 CSV.foreach("data/addresses.csv", headers: true) do |row|
-  a = Address.new(row)
+  binding.pry
+  a = Address.new(row.to_hash)
+  binding.pry
   pre = Precinct.new(a.precinct_code) if !Precinct.codes.include?(a.precinct_code)
   pre = Precinct.find_by_code(a.precinct_code) if Precinct.codes.include?(a.precinct_code)
   pre.addresses << a
@@ -19,18 +21,18 @@ CSV.foreach("data/precinct_polling_list.csv", headers: true) do |row|
   end
 end
 
-preCounter = 0
-pollCounter = 0
+preCounter = 1
+pollCounter = 1
 
 while preCounter < Precinct.all.length
   current = Precinct.all[preCounter]
-  current.id = "pre" + sprintf('%03d', preCounter + 1)
+  current.id = "pre" + sprintf('%03d', preCounter)
   preCounter += 1
 end
 
 while pollCounter < PollingPrecinct.all.length
   current = PollingPrecinct.all[pollCounter]
-  current.id = "poll" + sprintf('%03d', pollCounter + 1)
+  current.id = "poll" + sprintf('%03d', pollCounter)
   pollCounter += 1
 end
 
@@ -38,7 +40,7 @@ end
 precinct = File.open("precinct.txt", "w")
 precinct.puts("name,number,locality_id,ward,mail_only,ballot_style_image_url,id")
 polling_location = File.open("polling_location.txt", "w")
-polling_location.puts("address_line,directions,hours,photo_uri,hours_open_id,is_drop_box,is_early_voting,latitude,longitude,latlng_source,id")
+polling_location.puts("address,directions,hours,photo_uri,id")
 ppp = File.open("precinct_polling_location.txt", "w")
 ppp.puts("precinct_id,polling_location_id")
 
@@ -68,9 +70,4 @@ Precinct.all.each do |pre|
 end
 
 
-
-# arr = Precinct.no_poll
-
-
-x = 1
 

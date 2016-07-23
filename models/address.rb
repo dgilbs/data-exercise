@@ -13,7 +13,7 @@ class Address
     @apt = hash["Apt"]
     @city = hash["City"]
     @state = hash["State"]
-    @zip = hash["Zip"].split("-")[0]
+    @zip = hash["Zip"].split
     @country = hash["Country"]
     @precinct_id = hash["Precinct ID"]
     @@all << self

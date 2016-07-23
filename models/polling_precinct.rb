@@ -131,7 +131,7 @@ class PollingPrecinct
   end
 
   def txt_data
-    [self.address, self.directions, self.hours, self.photo_uri, self.hours_open_id, self.is_early_voting, self.latitude, self.longitude, self.latlng_source, self.id]
+    [self.address, self.directions, self.hours, self.photo_uri, self.id]
   end
 
 

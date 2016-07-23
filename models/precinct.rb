@@ -59,13 +59,14 @@ class Precinct
   def external_identifier_value
   end
 
-  def is_mail_only
+  def mail_only
   end
 
   def locality_id
   end
 
   def name
+    self.code
   end
 
   def number
@@ -77,16 +78,16 @@ class Precinct
   def precinct_split
   end
 
+  def ballot_style_image_url
+  end
+
   def ward
   end
 
 
   def txt_data
-    [self.ballot_style_id, self.electoral_district_ids,
-      self.external_identifier_type, self.external_identifier_other_type, 
-      self.external_identifier_value, self.is_mail_only, self.locality_id,
-      self.name, self.number, self.polling_location_ids, self.precinct_split,
-      self.ward, self.id]
+     [self.name, self.number, self.locality_id, self.mail_only, 
+      self.ballot_style_image_url, self.id]
   end
 
 end
