@@ -18,7 +18,6 @@ CSV.foreach("data/precinct_polling_list.csv", headers: true) do |row|
   end
 end
 
-
 preCounter = 0
 pollCounter = 0
 
@@ -40,7 +39,7 @@ end
 precinct = File.open("precinct.txt", "w")
 precinct.puts("name,number,locality_id,ward,mail_only,ballot_style_image_url,id")
 polling_location = File.open("polling_location.txt", "w")
-polling_location.puts("address,directions,hours,photo_uri,id")
+polling_location.puts("address_location_name,address_line1,address_line2,address_line3,address_city,address_state,address_zip,directions,polling_hours,photo_url,id")
 ppp = File.open("precinct_polling_location.txt", "w")
 ppp.puts("precinct_id,polling_location_id")
 add_poll = File.open("address_polling_location.txt" , "w")

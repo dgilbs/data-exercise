@@ -98,9 +98,18 @@ class PollingPrecinct
     arr.join(" ")
   end
 
+  def address_line_two
+  end
+
+  def address_line_three
+  end
+
   def id_number
     arr = self.id.split("")
     arr[4..arr.length-1].join
+  end
+
+  def name
   end
 
   def directions
@@ -131,7 +140,8 @@ class PollingPrecinct
   end
 
   def txt_data
-    [self.address, self.directions, self.hours, self.photo_uri, self.id]
+    [self.name, self.street, self.address_line_two, self.address_line_three,
+     self.city, self.state, self.zip, self.directions, self.hours, self.photo_uri, self.id]
   end
 
 

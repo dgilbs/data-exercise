@@ -36,6 +36,10 @@ class Precinct
     self.addresses.first.polling_location_id if self.addresses.length > 0
   end
 
+  def polling_location_address
+    self.addresses.first.polling_location_address if self.addresses.length > 0
+  end
+
   def self.find_by_code(code)
     self.all.find{|a| a.code == code}
   end
