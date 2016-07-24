@@ -18,21 +18,6 @@ CSV.foreach("data/precinct_polling_list.csv", headers: true) do |row|
   end
 end
 
-# faster run time?
-# CSV.foreach("data/precinct_polling_list.csv", headers: true) do |row|
-#   p = PollingPrecinct.new(row.to_hash)
-# end
-
-# CSV.foreach("data/addresses.csv", headers: true) do |row|
-#   a = Address.new(row.to_hash)
-#   p = PollingPrecinct.all.find{|pp| pp.address == a.polling_location_address}
-#   p.addresses << a if p
-#   pre = Precinct.new(a.precinct_code) if !Precinct.codes.include?(a.precinct_code)
-#   pre = Precinct.find_by_code(a.precinct_code) if Precinct.codes.include?(a.precinct_code)
-#   pre.addresses << a
-# end
-
-
 
 preCounter = 0
 pollCounter = 0
