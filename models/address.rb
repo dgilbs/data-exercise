@@ -23,6 +23,11 @@ class Address
     @@all 
   end
 
+  def street_address
+    arr = [self.street, self.apt, self.city, self.state, self.zip].compact
+    arr.join(" ")
+  end
+
   def find_by_zip(zip)
     arr = self.all.select{|a| a.zip == zip}
     arr[0] if arr.length == 1
@@ -51,6 +56,15 @@ class Address
     poll = PollingPrecinct.all.find {|a| a.precinct == self.precinct_code}
     if poll 
       return poll.id_number
+    else
+      nil
+    end
+  end
+
+  def polling_location_address
+    poll = PollingPrecinct.all.find {|a| a.precinct == self.precinct_code}
+    if poll 
+      return poll.address
     else
       nil
     end
